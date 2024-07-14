@@ -1,0 +1,101 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #F5F6FA;
+}
+
+*,
+html {
+    scroll-behavior: smooth !important;
+}
+
+.ibm-plex-sans-arabic-thin {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-extralight {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-light {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-regular {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-medium {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-semibold {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.ibm-plex-sans-arabic-bold {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --green-color: #536805;
+    --hover-color: #465D19;
+    --main-transition: 0.9s;
+}
+
+*:focus {
+    outline: none;
+}
+
+::placeholder {
+    text-transform: capitalize;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(19, 109, 28);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(43, 13, 28);
+}
+
+
+.f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

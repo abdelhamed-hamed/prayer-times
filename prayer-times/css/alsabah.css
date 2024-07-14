@@ -1,0 +1,31 @@
+body {
+    background-color: #DDD;
+}
+
+.container-azkar {
+    max-width: 95%;
+    margin: 45px auto 0;
+
+    & .zekr {
+        background-color: #496d4b;
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        box-shadow: 5px 4px 6px #1c1616;
+        margin-bottom: 15px;
+
+        & p {
+            line-height: 1.7;
+            letter-spacing: 1.2px;
+        }
+
+        & .mainCount {
+            width: fit-content;
+            width: fit-content;
+            margin: 5px auto 0px 0;
+            background-color: #193533;
+            padding: 11px;
+        }
+
+    }
+}

@@ -1,0 +1,52 @@
+body {
+    background-color: #595b54;
+}
+
+
+.names {
+    margin: 37px auto;
+    border: 4px solid #adadad;
+    display: flex;
+    max-width: 90%;
+    gap: 10px;
+    row-gap: 19px;
+    flex-wrap: wrap;
+    background-color: #985454;
+
+    & .name {
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #f1b150;
+        border-radius: 6px;
+        box-shadow: 3px 2px #40462f;
+        text-align: center;
+        flex: 1;
+        cursor: pointer;
+        transition: var(--main-transition, 0.5s);
+
+        &:hover {
+            background-color: #d89228;
+        }
+    }
+
+    & .active {
+        background-color: #ff9b05;
+    }
+}
+
+.menansName {
+    padding: 5px 20px;
+    margin: 0 auto 20px;
+    max-width: 90%;
+    background-color: #253b26;
+    color: white;
+
+    & h2 {
+        color: #e4cdb3;
+    }
+}

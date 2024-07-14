@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/framework.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/asmaa.css" />
+    <title>أسماء الله الحسني</title>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="head d-flex a-center fu-height">
+        <i
+          class="fa-solid fa-bars c-white pointer fu-height f-center p-10"
+          id="bars"
+        ></i>
+        <a href="/index.html" class="fu-height f-center"
+          ><p
+            class="cap d-inline-b m-0 c-white pointer relative fu-height f-center"
+          >
+            الرئيسية
+          </p></a
+        >
+      </div>
+    </header>
+    <div class="nav" id="navBar">
+      <div class="navHead">
+        <a href="/index.html" class="p-t-20 d-block">
+          <img src="../images/logo.png" class="m-auto f-center" />
+          <span class="cap d-block m-b-10 m-t-15 text-center c-white"
+            >مواقيت الصلاة</span
+          >
+          <span class="cap d-block text-center c-888">مواعيد الأذان</span>
+        </a>
+      </div>
+      <div class="navContent m-t-20 p-b-20">
+        <ul>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-regular fa-clock m-l-10 f-20"></i>
+            <a href="/index.html" class="c-white pointer"> مواقيت الصلاة </a>
+          </li>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-solid fa-mosque m-l-10 f-20"></i>
+            <a href="alsabah.html" class="c-white pointer"
+              >أذكار الصباح والمساء
+            </a>
+          </li>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-solid fa-signature m-l-10 f-20"></i>
+            <a onclick="window.location.reload()" class="c-white pointer">
+              اسماء الله الحسني
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="names p-20 d-flex f-wrap m-b-20" id="namesAllah"></div>
+
+    <div class="menansName" id="menansName">
+      <h2>معني اسم الله <span id="chosenName"></span></h2>
+      <p id="nameExplain" class="f-20 l-height">
+        وهو الاسم الأعظم الذي تفرد به الحق سبحانه وخص به نفسه وجعله أول أسمائه،
+        وأضافها كلها إليه فهو علم على ذاته سبحانه
+      </p>
+    </div>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/asmaa.js" type="module"></script>
+  </body>
+</html>

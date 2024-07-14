@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>مواقيت الصلاة | مواعيد الصلاة</title>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="head d-flex a-center fu-height">
+        <i
+          class="fa-solid fa-bars c-white pointer fu-height f-center p-10"
+          id="bars"
+        ></i>
+        <a onclick="window.location.reload()" class="fu-height f-center"
+          ><p
+            class="cap d-inline-b m-0 c-white pointer relative fu-height f-center"
+          >
+            الرئيسية
+          </p></a
+        >
+      </div>
+    </header>
+    <div class="nav" id="navBar">
+      <div class="navHead">
+        <a onclick="window.location.reload()" class="p-t-20 d-block">
+          <img src="../images/logo.png" class="m-auto f-center" />
+          <span class="cap d-block m-b-10 m-t-15 text-center c-white"
+            >مواقيت الصلاة</span
+          >
+          <span class="cap d-block text-center c-888">مواعيد الأذان</span>
+        </a>
+      </div>
+      <div class="navContent m-t-20 p-b-20">
+        <ul>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-regular fa-clock m-l-10 f-20"></i>
+            <a onclick="window.location.reload()" class="c-white pointer">
+              مواقيت الصلاة
+            </a>
+          </li>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-solid fa-mosque m-l-10 f-20"></i>
+            <a href="/html/alsabah.html" class="c-white pointer">
+              أذكار الصباح والمساء
+            </a>
+          </li>
+          <li class="pointer c-white p-15 d-flex a-center">
+            <i class="fa-solid fa-signature m-l-10 f-20"></i>
+            <a href="/html/asmaa.html" class="c-white pointer">
+              اسماء الله الحسني
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container m-auto">
+      <div class="search m-t-20 m-b-20 b-white p-10">
+        <h2 class="text-center">مواقيت الصلاة</h2>
+        <input
+          type="text"
+          placeholder="اسم المدينة .... "
+          id="place"
+          class="fu-width p-5 c-black m-b-10"
+        />
+        <div class="buttonSearch f-center gap-25 p-b-20">
+          <button id="search" class="p-5 c-white pointer">بحث !</button>
+          <button id="findMyPlace" class="p-5 c-white pointer">
+            جد مكاني !
+          </button>
+        </div>
+      </div>
+      <div class="timePlace m-t-20 m-b-20 b-white p-10">
+        <div class="placeDetails m-b-20">
+          <h2 class="c-blue f-16 m-b-10">
+            مواقيت الصلاة والأذان في <span class="country"></span>,
+            <span class="government"></span>
+          </h2>
+          <span class="f-14 m-b-10 d-block"
+            ><span class="country">مصر</span> &lt;
+            <span class="government">الزقازيق</span></span
+          >
+          <p>
+            <span class="f-13" id="dayName">الخميس</span>
+            <span class="f-13" id="dayHNumber">15</span>
+            <span class="f-13" id="monthHName">ذوالقعدة</span>
+            <span class="f-13" id="yearH">1445</span>
+            <span class="f-13">هجرية</span>
+            <span class="f-13">الموافق</span>
+            <span class="f-14" id="dateM">21/5/2003</span>
+          </p>
+        </div>
+        <div class="prayers m-b-20">
+          <div class="nextprayerDetail text-center m-t-30 p-15 c-white">
+            <span class="nextprayer d-block m-b-10 f-20">الفجر</span>
+            <span class="d-block m-b-10"><span id="timesLeft"> </span></span>
+            <span class="d-block timeLeftWord"
+              >الوقت المتبقي لأذان
+              <span class="nextprayer m-b-10">الفجر</span></span
+            >
+          </div>
+        </div>
+        <div class="timeNow m-b-20 text-center">
+          <span id="timeNow" class="cap d-block m-b-10">00:00:00</span>
+          <span>الوقت الاّن في <span class="government">الزقازيق</span> </span>
+        </div>
+        <div class="prayersTime">
+          <div class="fajr p-10 m-l-10 text-center bor-6" id="fajr">
+            <span class="d-block m-b-10" id="fajrTime">AM 4:12</span>
+            <i class="fa-solid fa-moon d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="fajrName">الفجر</span>
+          </div>
+          <div class="shrook p-10 m-l-10 text-center bor-6" id="shrook">
+            <span class="d-block m-b-10" id="shrookTime">AM 4:12</span>
+            <i class="fa-solid fa-cloud-sun d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="shrookName">الشروق</span>
+          </div>
+          <div class="zohr p-10 m-l-10 text-center bor-6" id="zohr">
+            <span class="d-block m-b-10" id="zohrTime">AM 4:12</span>
+            <i class="fa-regular fa-sun d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="zohrName">الظهر</span>
+          </div>
+          <div class="aasr p-10 m-l-10 text-center bor-6" id="aasr">
+            <span class="d-block m-b-10" id="aasrTime">AM 4:12</span>
+            <i class="fa-solid fa-sun d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="aasrName">العصر</span>
+          </div>
+          <div class="maghreb p-10 m-l-10 text-center bor-6" id="maghreb">
+            <span class="d-block m-b-10" id="maghrebTime">AM 4:12</span>
+            <i class="fa-solid fa-cloud-sun d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="maghrebName">المغرب</span>
+          </div>
+          <div class="eshaa p-10 text-center bor-6 m-l-10" id="eshaa">
+            <span class="d-block m-b-10" id="eshaaTime">AM 4:12</span>
+            <i class="fa-regular fa-moon d-block m-b-10 f-20"></i>
+            <span class="d-block m-b-10" id="eshaaName">العشاء</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/home.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
